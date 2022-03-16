@@ -5,24 +5,27 @@ $secondary: #caf0f8;
 $tertiary: #00b4d8;
 $quarternary: #03045e;
 
-$mob: 600px;
-$tab: 1200px;
+html {
+  font-size: 62.5%;
+}
+$mob: 600rem;
+$tab: 1200rem;
 
 .Header {
-  height: 100px;
+  height: 10rem;
   background: $primary;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 1rem;
 
   .BankName {
-    margin: 60px 35px;
+    margin: 6rem 3.5rem;
     font-family: "Lusitana";
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 52px;
+    font-size: 4rem;
+    line-height: 5.2rem;
 
     a {
       text-decoration: none;
@@ -38,15 +41,15 @@ $tab: 1200px;
     a {
       text-decoration: none;
       color: black;
-      margin-right: 30px;
+      margin-right: 3rem;
     }
     p {
       font-family: "Lusitana";
       font-style: normal;
       font-weight: 400;
-      font-size: 25px;
-      line-height: 32px;
-      padding: 0 10px;
+      font-size: 2.5rem;
+      line-height: 3.2rem;
+      padding: 0 1rem;
     }
     p:hover {
       text-decoration: underline;
@@ -58,10 +61,10 @@ $tab: 1200px;
 }
 
 .Home {
-  margin-top: 80px;
+  margin-top: 8rem;
   height: auto;
   display: flex;
-  padding: 60.7px 7.5%;
+  padding: 6rem 7.5%;
   align-items: center;
   text-align: center;
   justify-content: space-around;
@@ -71,33 +74,33 @@ $tab: 1200px;
 }
 
 .Card {
-  width: 290px;
-  height: 460px;
+  width: 29rem;
+  height: 46rem;
   background: $tertiary;
-  border-radius: 10px;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  padding: 25px 30px;
+  padding: 2.5rem 3rem;
   align-items: center;
   text-decoration: none;
   color: black;
   @media (max-width: $mob) {
     width: 100%;
-    height: 275px;
+    height: 27.5rem;
     flex-direction: row;
-    margin: 20px 0;
+    margin: 2rem 0;
   }
-  @media (min-width: 601px) and (max-width: $tab) {
-    min-width: 510px;
+  @media (min-width: 601rem) and (max-width: $tab) {
+    min-width: 51rem;
     width: 70%;
-    height: 275px;
+    height: 27.5rem;
     flex-direction: row;
-    margin: 20px 0;
+    margin: 2rem 0;
   }
 
   .Card_Image {
-    width: 290px;
-    height: 246px;
+    width: 29rem;
+    height: 24.6rem;
     mix-blend-mode: multiply;
 
     @media (max-width: $tab) {
@@ -113,25 +116,115 @@ $tab: 1200px;
 
   .Card_Body {
     text-align: center;
-    height: 225px;
+    height: 22.5rem;
     width: auto;
-    padding: 20px 10px;
+    padding: 2rem 1rem;
     box-sizing: border-box;
 
     h1 {
       font-family: "Source Sans Pro";
       font-style: normal;
       font-weight: 700;
-      font-size: 30px;
-      line-height: 38px;
+      font-size: 3rem;
+      line-height: 3.8rem;
     }
 
     p {
       font-family: "Source Sans Pro";
       font-style: normal;
       font-weight: 400;
-      font-size: 25px;
-      line-height: 31px;
+      font-size: 2.5rem;
+      line-height: 3.1rem;
+    }
+  }
+}
+
+// .Transfer {
+//   width: 60rem;
+//   height: 46rem;
+//   margin: 4.2rem 34.1rem;
+//   display: flex;
+//   text-align: center;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: $tertiary;
+// }
+.Transfer {
+  height: 62rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 7% 12%;
+  box-sizing: border-box;
+
+  form {
+    width: 60%;
+    height: auto;
+    min-width: 50rem;
+    padding: 4rem;
+    justify-content: center;
+    border-radius: 4rem;
+    margin: 0 2rem;
+    text-align: center;
+    background-color: $tertiary;
+
+    h1 {
+      font-family: "Lusitana";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 5.2rem;
+      margin: 0 auto 1.5rem;
+    }
+
+    input {
+      width: 85%;
+      height: 4.5rem;
+      background: $primary;
+      border-radius: 3rem;
+      margin: 1rem 1rem;
+      text-align: center;
+      font-family: "Source Sans Pro";
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2.5rem;
+      line-height: 3.1rem;
+      border: none;
+      // border: 0.3rem solid white;
+    }
+
+    input:hover,
+    :focus {
+      border: 0.3rem solid $quarternary;
+      color: $primary;
+      outline: none;
+    }
+
+    // p {
+    //   color: red;
+    //   font-size: 1.3rem;
+    //   font-family: "Play", cursive;
+    //   margin: 0 10%;
+    //   text-align: left;
+    // }
+
+    button {
+      width: 15rem;
+      height: 4.5rem;
+      margin: 1.5rem auto;
+      border-radius: 1.5rem;
+      background-color: $quarternary;
+      color: $secondary;
+      font-family: "Play", cursive;
+      font-size: 2.5rem;
+      border: none;
+    }
+    button:hover {
+      border-color: $primary;
+      color: $quarternary;
+      background-color: white;
     }
   }
 }
@@ -141,11 +234,11 @@ $tab: 1200px;
   width: 100%;
   height: auto;
   background: $primary;
-  border-radius: 10px;
+  border-radius: 1rem;
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1.5rem;
   position: absolute;
   bottom: 0;
 
