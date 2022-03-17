@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  position: relative;
   box-sizing: border-box;
   background-color: #caf0f8;
   text-decoration: none;
+  min-height: 100vh;
 }

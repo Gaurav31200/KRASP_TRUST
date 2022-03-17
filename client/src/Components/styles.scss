@@ -8,11 +8,11 @@ $quarternary: #03045e;
 html {
   font-size: 62.5%;
 }
-$mob: 600rem;
-$tab: 1200rem;
+$mob: 600px;
+$tab: 1200px;
 
 .Header {
-  height: 10rem;
+  height: 7rem;
   background: $primary;
   display: flex;
   justify-content: space-between;
@@ -61,21 +61,22 @@ $tab: 1200rem;
 }
 
 .Home {
-  margin-top: 8rem;
   height: auto;
   display: flex;
-  padding: 6rem 7.5%;
+  padding: 5% 7.5%;
   align-items: center;
   text-align: center;
+  box-sizing: border-box;
   justify-content: space-around;
   @media (max-width: $tab) {
     flex-direction: column;
+    padding-bottom: 12%;
   }
 }
 
 .Card {
-  width: 29rem;
-  height: 46rem;
+  width: 23rem;
+  height: 33rem;
   background: $tertiary;
   border-radius: 1rem;
   display: flex;
@@ -90,7 +91,7 @@ $tab: 1200rem;
     flex-direction: row;
     margin: 2rem 0;
   }
-  @media (min-width: 601rem) and (max-width: $tab) {
+  @media (min-width: 601px) and (max-width: $tab) {
     min-width: 51rem;
     width: 70%;
     height: 27.5rem;
@@ -99,8 +100,8 @@ $tab: 1200rem;
   }
 
   .Card_Image {
-    width: 29rem;
-    height: 24.6rem;
+    width: 20rem;
+    height: 18rem;
     mix-blend-mode: multiply;
 
     @media (max-width: $tab) {
@@ -125,101 +126,240 @@ $tab: 1200rem;
       font-family: "Source Sans Pro";
       font-style: normal;
       font-weight: 700;
-      font-size: 3rem;
-      line-height: 3.8rem;
+      font-size: 2.3rem;
+      line-height: 2rem;
+      margin-bottom: 2rem;
     }
 
     p {
       font-family: "Source Sans Pro";
       font-style: normal;
       font-weight: 400;
-      font-size: 2.5rem;
-      line-height: 3.1rem;
+      font-size: 2rem;
+      line-height: 2rem;
+      margin: 1rem 0;
     }
   }
 }
 
-// .Transfer {
-//   width: 60rem;
-//   height: 46rem;
-//   margin: 4.2rem 34.1rem;
-//   display: flex;
-//   text-align: center;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: $tertiary;
-// }
+.CustomerList {
+  height: auto;
+  min-height: 62rem;
+  width: 100%;
+  padding: 4rem 12%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+
+  table {
+    background-color: white;
+    width: 90%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1.8rem;
+
+    tr:nth-child(even) {
+      background-color: rgba($secondary, $alpha: 0.5);
+    }
+    tr:nth-child(1) {
+      border: none;
+    }
+    tr {
+      border: none;
+    }
+    tr:hover {
+      background-color: rgba($primary, $alpha: 0.3);
+    }
+    th {
+      padding: 1rem;
+      font-size: 2rem;
+      border-bottom: 3px solid $primary;
+      text-transform: uppercase;
+      background-color: $secondary;
+      font-family: "Lusitana";
+      letter-spacing: 0.1rem;
+    }
+    td {
+      padding: 1rem;
+      font-family: "Source Sans Pro";
+    }
+    @media (max-width: 640px) {
+      th:nth-child(4),
+      td:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+}
+
+.Blocks {
+  background-color: $secondary;
+  height: auto;
+  width: 23%;
+  min-width: 34.9rem;
+  @media (max-width: $tab) {
+    width: 40%;
+  }
+  @media (max-width: 750px) {
+    width: 80%;
+  }
+  @media (max-width: $mob) {
+    width: 80%;
+  }
+  margin: 1rem;
+  display: inline-block;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 25px;
+
+  fieldset {
+    display: inline-block;
+    border-color: $primary;
+    padding: 0 1rem 0.5rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    legend {
+      font-size: 1.5rem;
+      font-family: "Source Sans Pro";
+    }
+    h1 {
+      font-size: 2rem;
+      font-family: "Raleway";
+      margin: 0;
+      padding: 0;
+      color: black;
+    }
+  }
+
+  .sno {
+    width: 25%;
+    h1 {
+      font-weight: 500;
+    }
+  }
+  .time {
+    width: 72%;
+    h1 {
+      font-weight: 500;
+    }
+  }
+  .name {
+    width: 100%;
+  }
+  .amount {
+    width: 55%;
+  }
+  .status {
+    width: 40%;
+    h1 {
+      font-weight: 500;
+    }
+  }
+}
+
+.History {
+  min-height: 620px;
+  height: 100%;
+  text-align: center;
+  padding: 2.5rem 0px;
+  box-sizing: border-box;
+
+  h1 {
+    font-family: "Lusitana";
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $quarternary;
+    padding: 0px;
+    margin: 0 0 25px;
+  }
+}
+
 .Transfer {
   height: 62rem;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
   justify-content: center;
-  padding: 7% 12%;
+  padding: 0 12%;
   box-sizing: border-box;
 
   form {
-    width: 60%;
+    width: 40%;
     height: auto;
     min-width: 50rem;
     padding: 4rem;
     justify-content: center;
     border-radius: 4rem;
-    margin: 0 2rem;
+    margin: 5rem 2rem;
     text-align: center;
     background-color: $tertiary;
+    flex-direction: column;
 
     h1 {
       font-family: "Lusitana";
       font-style: normal;
       font-weight: 700;
-      font-size: 4rem;
+      font-size: 3rem;
+      line-height: 3.2rem;
+      margin: 0 auto 1.5rem;
+    }
+    h2 {
+      font-family: "Lusitana";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.5rem;
       line-height: 5.2rem;
       margin: 0 auto 1.5rem;
     }
 
     input {
-      width: 85%;
-      height: 4.5rem;
-      background: $primary;
+      color: black;
+      width: 60%;
+      height: 3.5rem;
+      background-color: white;
       border-radius: 3rem;
       margin: 1rem 1rem;
       text-align: center;
       font-family: "Source Sans Pro";
       font-style: italic;
-      font-weight: 300;
-      font-size: 2.5rem;
-      line-height: 3.1rem;
-      border: none;
-      // border: 0.3rem solid white;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 2rem;
+      border: 0.3rem solid $tertiary;
     }
 
     input:hover,
     :focus {
       border: 0.3rem solid $quarternary;
-      color: $primary;
       outline: none;
     }
 
-    // p {
-    //   color: red;
-    //   font-size: 1.3rem;
-    //   font-family: "Play", cursive;
-    //   margin: 0 10%;
-    //   text-align: left;
-    // }
+    p {
+      color: $quarternary;
+      font-size: 1.7rem;
+      font-family: "Source Sans Pro";
+      margin: 0 10%;
+      text-align: center;
+    }
 
     button {
-      width: 15rem;
+      width: 25%;
       height: 4.5rem;
       margin: 1.5rem auto;
       border-radius: 1.5rem;
       background-color: $quarternary;
       color: $secondary;
       font-family: "Play", cursive;
-      font-size: 2.5rem;
+      font-size: 2rem;
       border: none;
+      cursor: pointer;
+    }
+    button:disabled {
+      cursor: not-allowed;
     }
     button:hover {
       border-color: $primary;
@@ -232,13 +372,13 @@ $tab: 1200rem;
 .Footer {
   text-align: center;
   width: 100%;
-  height: auto;
+  height: 8.5rem;
   background: $primary;
   border-radius: 1rem;
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   position: absolute;
   bottom: 0;
 
@@ -246,7 +386,7 @@ $tab: 1200rem;
     margin-bottom: 0;
   }
   h1 {
-    padding: 0;
-    margin-top: 0;
+    padding-bottom: 1.5rem;
+    margin: 0;
   }
 }
