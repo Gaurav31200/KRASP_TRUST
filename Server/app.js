@@ -14,11 +14,8 @@ app.use("/api", routes);
 //bFbIjFH63V0CLfHb
 
 mongoose
-  //   .connect(
-  //     `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.volbc.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
-  //   )
   .connect(
-    "mongodb+srv://krasp31200:bFbIjFH63V0CLfHb@cluster0.ccllf.mongodb.net/KraspDb?retryWrites=true&w=majority"
+    `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.ccllf.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
   )
   .then(() => {
     console.log("Connected Successfully");
