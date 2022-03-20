@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-export default function () {
+export default function Footer() {
   const footerElement = (
     <div className="Footer">
       <footer>
