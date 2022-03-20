@@ -7,16 +7,20 @@ $quarternary: #03045e;
 
 html {
   font-size: 62.5%;
+  position: relative;
 }
 $mob: 600px;
 $tab: 1200px;
 
 .Header {
+  width: 100%;
   height: 7rem;
   background: $primary;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 7.5%;
+  box-sizing: border-box;
   border-radius: 1rem;
 
   .BankName {
@@ -285,6 +289,7 @@ $tab: 1200px;
   text-align: center;
   justify-content: center;
   padding: 0 12%;
+  align-items: center;
   box-sizing: border-box;
 
   form {
@@ -294,7 +299,6 @@ $tab: 1200px;
     padding: 4rem;
     justify-content: center;
     border-radius: 4rem;
-    margin: 5rem 2rem;
     text-align: center;
     background-color: $tertiary;
     flex-direction: column;

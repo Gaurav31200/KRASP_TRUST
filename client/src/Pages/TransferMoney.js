@@ -42,7 +42,7 @@ export default function TransferMoney() {
     if (isFormValid) {
       axios({
         method: "post",
-        url: "http://localhost:5000/api/transfer-money",
+        url: `${process.env.REACT_APP_URL}/transfer-money`,
         data: data,
       })
         .then((res) => {
@@ -82,14 +82,16 @@ export default function TransferMoney() {
               changeHandler(event);
             }}
             onBlur={(event) => {
-              axios
-                .get(
-                  "http://localhost:5000/api/check-username/" +
-                    event.target.value
-                )
-                .then((res) => {
-                  setIsSenderNameExist(res.data);
-                });
+              if (event.target.value !== "") {
+                axios
+                  .get(
+                    `${process.env.REACT_APP_URL}/check-username/` +
+                      event.target.value
+                  )
+                  .then((res) => {
+                    setIsSenderNameExist(res.data);
+                  });
+              }
             }}
           />
           {isSenderNameExist || senderName === "" ? (
@@ -112,14 +114,16 @@ export default function TransferMoney() {
               changeHandler(event);
             }}
             onBlur={(event) => {
-              axios
-                .get(
-                  "http://localhost:5000/api/check-username/" +
-                    event.target.value
-                )
-                .then((res) => {
-                  setIsRecipientNameExist(res.data);
-                });
+              if (event.target.value !== "") {
+                axios
+                  .get(
+                    `${process.env.REACT_APP_URL}/check-username/` +
+                      event.target.value
+                  )
+                  .then((res) => {
+                    setIsRecipientNameExist(res.data);
+                  });
+              }
             }}
           />
           {isRecipientNameExist || recipientName === "" ? (

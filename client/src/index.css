@@ -1,9 +1,15 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
   position: relative;
   box-sizing: border-box;
+  flex-direction: column;
   background-color: #caf0f8;
   text-decoration: none;
   min-height: 100vh;
+}
+
+#root {
+  margin-bottom: 80px;
 }

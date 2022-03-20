@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 const CustomerList = () => {
   const [customerList, setCustomerList] = useState([]);
   useEffect(() => {
-    Axios.get("http://localhost:5000/api/view-customers").then(function (
+    Axios.get(`${process.env.REACT_APP_URL}/view-customers`).then(function (
       response
     ) {
       setCustomerList(response.data);
